@@ -1,7 +1,7 @@
 /* GLOBAL */
 
 :root {
-    --bg-body: hsl(0, 0%, 8%);
+    --bg-body: hsl(0, 100%, 50%);
     --bg-contact: hsl(0, 0%, 14%);
     --accent: hsl(153, 71%, 59%);
     --text1: hsl(0, 0%, 100%);
