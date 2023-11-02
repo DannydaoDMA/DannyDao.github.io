@@ -242,11 +242,11 @@ svg {
 
 .hero__image {
     position: absolute;
-    top: 90px;
-    left: 39%;
+    top: 130px;
+    left: 29%;
     translate: -10%;
-    width: 174px;
-    height: auto;
+    width: 300px;
+    height: 200px;
 }
 
 .hero__text {
@@ -271,7 +271,7 @@ h1 > span {
 }
 
 .hero__description {
-    margin-block-end: 24px
+    margin-block-end: 24px;
 }
 
 @media (min-width : 37.5em) {
@@ -302,9 +302,10 @@ h1 > span {
 
     .hero__text {
         margin-block-start: 90px;
-        margin-right: -50px;
+        /* margin-right: -50px; */
         margin-left: 100px;
-        flex: 1 0 58vw;
+        bottom: -50px;
+        flex: 1 0 50vw;
         text-align: left;
         z-index: 1;
     }
@@ -323,6 +324,7 @@ h1 > span {
         flex: 1 0 58vw;
         text-align: left;
         z-index: 1;
+        width: 30ch;
     }
 
 }
@@ -342,27 +344,32 @@ h1 > span {
     }
 
     .hero__image{
-        margin-block-start: -179px;
-        margin-top: -100px;
-        margin-left: 100px;
+        position: relative;
+        width: 42vw;
+        max-width: 420px;
+        height: auto;
+        left: 300px;
+        top: 80px;
+        translate: 0;
     }
 
     .hero__text {
         margin-block-start: 0;
         margin-right: 0;
         flex: 1;
+        margin-left: 400px;
     }
 
     .hero__headline {
         margin-block-end: 43px;
     }
 
-    .hero__headline > br {
+    /* .hero__headline > br {
         display: none;
-    }
+    } */
 
     .hero__description {
-        width: 38ch;
+        width: 40ch;
         margin-block-end: 66px;
     }
 
@@ -485,20 +492,20 @@ h1 > span {
     color: var(--text1);
 }
 
-@media (mind-width: 37.5em) {
-    .projects__grid {
+@media (min-width: 37.5em) {
+    /* .projects__grid {
         gap: 60px 24px;
         justify-items: start;
         text-align: left;
-    }
+    } */
 
     .projects__contact {
         justify-self: end;
     }
 
-    .projects__item {
+    /* .projects__item {
         grid-column: span 1;
-    }
+    } */
 
     .projects__image {
         display: block;
@@ -508,10 +515,10 @@ h1 > span {
         height: auto;
     }
 
-    .projects__headline,
+    /* .projects__headline,
     .projects__contact {
         grid-column: span 1;
-    }
+    } */
 
     .projects__contact {
         align-self: center;
@@ -543,7 +550,7 @@ h1 > span {
     .projects__item {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(1, auto);
     }
 
     .projects__picture {
@@ -707,19 +714,19 @@ h1 > span {
 
 }
 
-footer {
+.footer {
     padding-block: 40px 60px;
 }
 
 @media (min-width: 37.5em) {
-    footer {
+    .footer {
         padding-block: 30px 40px;
     }
 
 }
 
 @media (min-width: 62.5em) {
-    footer {
+    .footer {
         padding-block: 47px 92px;
     }
 }
