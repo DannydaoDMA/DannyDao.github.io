@@ -337,6 +337,7 @@ h1 > span {
     .hero__wrapper {
         position: relative;
         padding-bottom: 100px;
+        align-items: center;
     }
 
     .hero__content picture {
@@ -350,13 +351,10 @@ h1 > span {
     }
 
     .hero__text {
-        margin-block-start: 90px;
-        /* margin-right: -50px; */
-        margin-left: 100px;
-        bottom: -50px;
-        flex: 1 0 50vw;
-        text-align: left;
-        z-index: 1;
+        margin-block-start: 0;
+        margin-right: 0;
+        flex: 1;
+        margin-left: 400px;
     }
 
     .hero__headline {
