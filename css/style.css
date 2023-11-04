@@ -242,11 +242,11 @@ svg {
 
 .hero__image {
     position: absolute;
-    top: 130px;
-    left: 29%;
+    top: 100px;
+    left: 21%;
     translate: -10%;
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
 }
 
 .hero__text {
@@ -344,20 +344,18 @@ h1 > span {
     }
 
     .hero__image{
-        position: relative;
-        width: 42vw;
-        max-width: 420px;
-        height: auto;
-        left: 300px;
-        top: 80px;
-        translate: 0;
+        width: 1000px;
+        height: 400px;
+        margin-block-start: -179px;
+        margin-top: -100px;
+        margin-left: 200px;
     }
 
     .hero__text {
-        margin-block-start: 0;
+        margin-block-start: -50px;
         margin-right: 0;
         flex: 1;
-        margin-left: 400px;
+        margin-left: 200px;
     }
 
     .hero__headline {
