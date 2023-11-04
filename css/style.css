@@ -329,7 +329,7 @@ h1 > span {
 
 }
 
-@media (min-width : 62.5em) {
+@media (min-width : 75.5em) {
     .hero {
         margin-block-start: -120px;
         margin-left: 100px;
