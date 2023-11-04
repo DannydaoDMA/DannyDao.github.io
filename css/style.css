@@ -348,14 +348,14 @@ h1 > span {
     .hero__image{
         margin-block-start: -179px;
         margin-top: -100px;
-        margin-left: 100px;
+        margin-left: 250px;
     }
 
     .hero__text {
         margin-block-start: 0;
         margin-right: 0;
         flex: 1;
-        margin-left: 300px;
+        margin-left: 100px;
     }
 
     .hero__headline {
