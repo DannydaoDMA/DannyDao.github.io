@@ -1,534 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap" 
-            rel="stylesheet"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/images/Danny.png"
-        />
-        <link rel="stylesheet" href="css/style.css" />
-        <title> Danny Dao </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Danny Dao</title>
 </head>
+
 <body>
-    <header class="header">
-        <h2 class="visually-hidden">Header</h2>
-        <div class="wrapper">
-            <nav class = "header__nav">
-                <h2 class="visually-hidden">Navigation</h2>
-                <a href="https://dannydaodma.github.io/Portfolio/" class="header__home">
-                dannydao
-                <span class="visually-hidden">(to home page)</span> 
-                </a>
-            </nav>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-container" id="home">
+            <div class="logo" data aos= "zoom-in" data-aos-duration="1500">
+                <span>Danny Dao</span>
+            </div>
+            
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Artist Statement</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+                <i id= "hamburger" class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+
+            <div class="dropdown">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Artist Statement</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <i id= "hamburger" class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+                <i id="myBtn" class="fa-solid fa-arrow-up" onclick="topFunction()"></i>
         </div>
-    </header>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="/assets/Hero.png" alt="profile picture"/>
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hello I'm <span>Danny</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    I'm a 
+                    <span class="typewriter-text"> Digital Media Artist</span>
+                    <label for=""></label>
+                </div>
+                <!-- <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error velit, rerum corrupti aliquid et nihil voluptas obcaecati molestiae eos nobis tempora magni animi sapiente dolores minus est placeat culpa ut?</p> -->
+                <div class="social-links">
+                    <a href="https://github.com/DannydaoDMA" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/danny-dao-b22241290/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@DannyDaoDMA-vp8qd" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+                <!-- <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <button>Check out my work!</button>
+                </div> -->
+            </div>
+        </div>
+    </section>
 
-    <main id="main">
-        <section class="hero">
-            <div class="hero__wrapper bottom-border">
-                <div class="hero__content">
-                <picture>
-                    <source 
-                    media="(min-width: 62.5em)" 
-                    srcset="assets/images/heroimg.png"
-                    />
-                    <source 
-                    media="(min-width: 37.5em)" 
-                    srcset="assets/images/heroimg.png"
-                    />
-                    <img 
-                    class="hero__image"
-                    src="assets/images/heroimg.png" 
-                    alt="picture of Danny Dao" 
-                    width-="174"
-                    height="383"
-                    />
-                </picture>
-                <div class="hero__text">
-                    <h1 class="hero__headline-xl">
-                        <br> <br> Nice to 
-                        meet you!<br>I'm <span>Danny Dao</span>.
-                    </h1>
-                <p class="hero__description"> 
-                  Based in the Bay Area, Danny Dao has a creative approach to the technical and artistic aspects of crafting visuals and imagery. His work spans from generative art to audiovisual
-                  effects and projection mapping. Originally a choreography dancer since 2014, Danny's passion for music has blended his musicality with innovative visuals through time and space. With
-                  a good eye for immersive and interactive environments, his art bridges the gap between the common issues found in everyday life and what it takes to get through them by incorporating
-                  reality, dreams and technology together. <br> <br>
+<!-- About Section -->
 
-                  While attending San Jose State University, Danny has collaborated with the CADRE Student Organization as vice president to provide opportunities for creative exploration, learning, and
-                  collaboration among Digital Media artists and enthusiasts.
+<section class="about" id="about">
+    <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1500"><span>About Me</span></div>
+        <div class="about-details">
+            <div class="left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
+                <img src="assets/profile.jpg" alt="Profile Picture"/>
+            </div>
+            <div class="right">
+                <!-- <div class="topic" data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">Digital Media is my passion.</div> -->
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">Based in the Bay Area, Danny Dao is a digital media artist who has a creative approach to the technical and artistic aspects of crafting visuals and imagery. His work spans from generative art to audiovisual effects and projection mapping. Originally a choreography dancer since 2014, Danny's passion for music has blended his musicality with innovative visuals through time and space. With a good eye for immersive and interactive environments, his art bridges the gap between the common issues found in everyday life and what it takes to get through them by incorporating reality, dreams and technology together.
+                    <br>
+                    <br>
+                    While attending San Jose State University, Danny has collaborated with the CADRE Student Organization as vice president to provide opportunities for creative exploration, learning and collaboration among Digital Media Art artists and enthusiasts. 
                 </p>
-                <!-- <a href="#contact"class="hero__contact underline">Contact me</a> -->
+                <a href="/assets/CV.pdf" class="button" data-aos="zoom-in-right" data-aos-duration="1500" data-aos-delay="400">
+                    <button>Download CV</button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<!-- Artist Statement -->
+
+<section class="skills" id="skills">
+    <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1200"><span>Artist Statement</span></div>
+        <div class="text">
+            <div class="topic" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">
+                <!-- Skills Reflect Our Knowledge -->
+            </div>
+            <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="300">My work is deeply rooted in the power of self-relfection, where I believe that every experience and every element of the world has something valuable to offer. Each piece of my work tells a unique story, drawn from my past and present experiences, and serves as a testament to the lessons I have learned over time. <br> <br> Collaboration is central to my creative process. I believe that true growth comes not just from honing technical skills, but rather from the exchange of stories, ideas, and different perspectives. Through working with others, I have gained a deeper understanding of the world and its diverse narratives -- because it is impossible to truly know someone without first learning their story. <br> <br> I explore the intersection between the tangible and the digital, using a mix of materials and software to bridge the gap between reality and the realm of dreams. This fusion allows me to highlight the parallels between the physical world and the fantastical spaces of my imagination. <br> <br> My creative processs often beings with an image or idea that materializes in my mind, which I then bring to life through a sketch or writing on a blank canvas. From there, these initial thoughts are transformed and visualized within digital realms, allowing me to communicate my vision in away that resonates with others. These interactive experiences in alternate dimensions often provide the clarity and direction I seek in my art practice.</p>
             </div>
         </div>
     </div>
 </section>
 
-        <!-- <section class="skills">
-            <div class="wrapper skills__wrapper bottom-border2">
-            <h2 class="visually-hidden">Skills</h2>
-                <div class="skills__item">
-                    <h3 class="skills__title">Adobe Photoshop</h3>
-                    <p class="skills_description"> Image Editing</p>    
-                </div>
-                <div class="skills__item">
-                    <h3 class="skills__title">Adobe Illustrator</h3>
-                    <p class="skills_description">Vector Illustration</p>    
-                </div>
-                <div class="skills__item">
-                    <h3 class="skills__title">Adobe Premiere Pro</h3>
-                    <p class="skills_description">Video/Audio Editing</p>  
-                </div>
-                <div class="skills__item">
-                    <h3 class="skills__title">P5js</h3>
-                    <p class="skills_description">Creative Coding</p>  
-                </div>
-                <div class="skills__item">
-                    <h3 class="skills__title">Procreate</h3>
-                    <p class="skills_description">Digital Drawing</p>  
-                </div>
-            </div>
-        </section> -->
+<!-- Projects -->
 
-        <section class="projects">
-            <div class="wrapper projects__wrapper">
-                <div class="projects__grid">
-                    <h2 class="projects__headline header-xl">Projects</h2>
-                    <!-- <a href="#contact" class="projects__contact underline"
-                        >Contact me</a
-                    > -->
-
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                            <source
-                                media="(mind-width: 62.5em)"
-                                srcset=""
-                        />
-                        <img
-                            class="projects__image"
-                            src="assets/images/Singularity.png"
-                            alt="screenshot of singularity"
-                            width-="343"
-                            height="253"
-                        />    
-                        </picture>
-                        <h3 class="projects__name">Singularity</h3>
-                        <p class="projects__tags">
-                            <span>P5js</span> 
-                            <span>Adobe Premiere Pro</span>
-                            <span>Oct 2023</span>
-                        </p>
-                        <p2>
-                            <b><i>Singularity</i></b> is an audiovisual spectacle made with the concept of pushing the concepts of algorithms to create a video that pertains to the human senses
-                            of sight and sound. While working on this piece, I was interested in the idea behind black holes and how we as humans get sucked into the idea of passion. 
-                            This piece is a representation of my start into the world of digital media. The <b><i>Singularity</i></b> draws you in, and asks you to think of the bigger picture.
-                            <br>
-                            <br>
-                            Audio made by <b>Nate Rza</b>
-                            <br>
-                            <br>
-                            <centre> <u>References</u> </centre>
-                            <br>
-                            <br>
-                            <a href="https://p5js.org/examples/simulate-brownian-motion.html" class="projects__references">P5js: Brownian Motion</a>
-                            <br>
-                            <a href="https://p5js.org/examples/math-parametric-equations.html" class="projects__references">P5js: Parametric Equations</a>
-                            <br>
-                            <a href="https://p5js.org/examples/simulate-penrose-tiles.html" class="projects__references">P5js: Penrose Tiles</a>  
-                            <br>
-                            <br>
-                        </p2>
-                        <div class="projects__links">
-                            <a href="https://www.youtube.com/watch?v=d-aKmRd0IZ0&ab_channel=DannyDaoDMA" class="underline">View Project</a>
-                            <a href="p5js_code/singularity_code/sketch.js" class="underline">View Code</a>
-                            <a href="p5js_code/singularity_code/ddParametricPattern.js" class="underline">View Parametric Class</a>
-                            <a href="p5js_code/singularity_code/ddPenrose.js" class="underline">View Penrose Class</a>
-                            <a href="p5js_code/singularity_code/ddPointPattern.js" class="underline">View Brownian Class</a>
-                        </div>
-                    </div>
-
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                          <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                          />
-                          <img
-                            class="projects__image"
-                            src="assets/images/designerposter.png"
-                            alt="Screenshot of Design Poster"
-                            width-="343"
-                            height="253"
-                          />
-                        </picture>
-                        <h3 class="projects__name">Poster Within A Poster</h3>
-                        <p class="projects__tags">
-                          <span>Adobe Photoshop</span>
-                          <span>Adobe Illustrator</span>
-                          <span>December 2021</span>
-                        </p>
-                        <p2>
-                            <b><i>The Poster Within A Poster</i></b> is a replication and admiration for graphic designer, Neville Brody. This poster recreates the themes of punk rock, dadaism, and pop art;
-                            themes of which Neville Brody were influenced by. I wanted to make a poster that would put Neville Brody out in the limelight. In a world where graphic design is becoming more prominent, this poster
-                            changes the population's perspective of advertisement. Instead of advertising a product or corporation, this poster strives to advertise a person of significant importance or better yet, the person behind the job.
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                          <a href="assets/images/designerposter.png" class="underline">View Project</a>
-                          <a href="assets/images/nevillebrody.jpg" class="underline">View Vector Illustration</a>
-                        </div>
-                    </div>
-
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                          <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                          />
-                          <img
-                            class="projects__image"
-                            src="assets/images/Perspective.png"
-                            alt="Screenshot of Perspective"
-                            width-="343"
-                            height="253"
-                          />
-                        </picture>
-                        <h3 class="projects__name">Perspective</h3>
-                        <p class="projects__tags">
-                          <span>Blender</span>
-                          <span>THREEjs</span>
-                          <span>April 2024</span>    
-                        </p>
-                        <p2>
-                            "The only thing granted equally to all is an unfair reality." A quote taken from a character from <i>Jujutsu Kaisen</i> whose sister was unfairly cursed despite virtually being a good person.
-                            At that time of my life, I watched a close friend struggle as she fell into a state of misery and depression. Our perspectives were polar opposites. I would often talk about my accomplishments while she would
-                            often talk about her struggles. For her, she was blinded by failure and often told by others that she was not good enough. My inspiration for this piece came from countless hard months of hard conversations and questions
-                            to myself. Are our paths different because of our circumstances or is it because of something deeper than that? When are we able to understand each other? This piece uncovers the perspectives of two very different people,
-                            one that sees everything, the endless possibilites, and the other who sees very little.
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                          <a href="https://dannydaodma.github.io/perspective/" class="underline">View Project</a>
-                        </div>
-                    </div>
-                
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                        <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                        />
-                        <img
-                            class="projects__image"
-                            src="assets/images/Bubblepop.png"
-                            alt="Screenshot of Bubble Pop: Picnic On Saturn"
-                            width-="343"
-                            height="253"
-                        />
-                        </picture>
-                        <h3 class="projects__name">Bubble Pop: Picnic On Saturn</h3>
-                        <p class="projects__tags">
-                            <span>ShaderPark</span>
-                            <span>THREEjs</span>
-                            <span>May 2024</span>
-                        </p>
-                        <p2>
-                            Welcome to Saturn, a planet filled with unknown possibilities. <i>Bubble Pop: Picnic On Saturn</i> is set in a 3D environment with interactivity to enable motion and control inside the space. The title of 
-                            the piece is split into two different names. <i>Picnic on Saturn</i> is a song produced by a good friend of mine which is currently in development. When asked about the song, Nate mentioned that, "The goal was to create a song
-                            that would emulate the idea of what it would be like to have a picnic on Saturn." I pushed this concept further by incorporating a story of the alien lifeform known as <i>Bubble Pop</i>. When combining the two different worlds between
-                            music and art, a story is told through visual and audio immersion creating an environment only possible through net art.
-                        <br>
-                        <br>
-                            Audio made by <b>Nate Rza</b>
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                            <a href="https://bubble-pop-picnic-on-saturn.glitch.me/" class="underline">View Project</a>
-                        </div>
-                    </div>
-                    
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                          <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                          />
-                          <img
-                            class="projects__image"
-                            src="assets/images/Leftovers.png"
-                            alt="Screenshot of Leftovers"
-                            width-="343"
-                            height="253"
-                          />
-                        </picture>
-                        <h3 class="projects__name">Leftovers</h3>
-                        <p class="projects__tags">
-                          <span>Blender</span>
-                          <span>February 2024</span>    
-                        </p>
-                        <p2>
-                            While scrambling through an old high school backpack, I came across random items that I had not cleaned out. This is a representation of some of the most important memories I had from my childhood.
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                          <a href="assets/images/Leftovers.png" class="underline">View Project</a>
-                        </div>
-                    </div>
-
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                          <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                          />
-                          <img
-                            class="projects__image"
-                            src="assets/images/Butterflyeffect.png"
-                            alt="Screenshot of Butterfly Effect"
-                            width-="343"
-                            height="253"
-                          />
-                        </picture>
-                        <h3 class="projects__name">The Butterfly Effect</h3>
-                        <p class="projects__tags">
-                          <span>Adobe Illustrator</span>
-                          <span>Adobe After Effects</span>
-                          <span>October 2024</span>    
-                        </p>
-                        <p2>
-                            I often think that I resemble most like a butterfly. My ability to change and evolve as a person in order to understand the world better has allowed me the sense of liberation and the ability
-                            to let go of burdens. This piece is a reminder to pursue happiness because one life is all we have.
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                          <a href="https://www.youtube.com/shorts/YqkMgFmNvcs" class="underline">View Project</a>
-                        </div>
-                    </div>
-
-                    <div class="projects__item">
-                        <picture class="projects__picture">
-                          <source
-                            media="(min-width: 62.5em)"
-                            srcset=""
-                          />
-                          <img
-                            class="projects__image"
-                            src="assets/images/Subzero.png"
-                            alt="Screenshot of CADRE S.O. At Subzero Festival"
-                            width-="343"
-                            height="253"
-                          />
-                        </picture>
-                        <h3 class="projects__name">CADRE S.O. At Subzero Festival</h3>
-                        <p class="projects__tags">
-                          <span>Exhibition</span>
-                          <span>June 2024</span>    
-                        </p>
-                        <p2>
-                            CADRE S.O. presents <i>Fever Dream</i> and <i>Bubble Pop: Picnic on Saturn</i> at Subzero Festival. The exhibition presents two highly interactive projects on the two day weekend. Both projects were exhibited
-                            through projection mapping and interaction through a MIDI keyboard and the Xbox Kinect.
-                        <br>
-                        <br>
-                            <i>Fever Dream</i> by Nhat Minh Le
-                        <br>
-                        <br>
-                            <i>Bubble Pop: Picnic On Saturn</i> by Danny Dao
-                        <br>
-                        <br>
-                        </p2>
-                        <div class="projects__links">
-                          <a href="https://www.youtube.com/watch?v=_sHjnmHpYIY" class="underline">View Fever Dream</a>
-                          <a href="https://bubble-pop-picnic-on-saturn.glitch.me/" class="underline">View Bubble Pop: Picnic On Saturn</a>
-                          <a href="assets/images/Subzero.png" class="underline">View Poster</a>
-                        </div>
-                    </div>
-
-                    <div class="projects__item">
-                      <picture class="projects__picture">
-                        <source
-                          media="(min-width: 62.5em)"
-                          srcset=""
-                        />
-                        <img
-                          class="projects__image"
-                          src="assets/images/blot-room.png"
-                          alt="Screenshot of The Blot Room"
-                          width-="343"
-                          height="253"
-                        />
-                      </picture>
-                      <h3 class="projects__name">CADRE S.O. Presents The Blot Room</h3>
-                      <p class="projects__tags">
-                        <span>Exhibition</span>
-                        <span>October 2024</span>    
-                      </p>
-                      <p2>
-                          The CADRE Student Organization and the CADRE Laboratory for New Digital Media have worked together to prepare an exhibition for Maker Faire 2024 in Vallejo, California. 
-                          Brought to you by CADRE S.O. President, John Joseph Santos, CADRE S.O. Vice President, Danny Dao, and DMA Faculty, Steve Durie, the exhibition provides a variety of projects ranging form
-                          video game arcade prototypes presented by The Game Development Club at SJSU, the Lightbox Collection and other works. 
-                      <br>
-                      <br>
-                      </p2>
-                      <div class="projects__links">
-                        <a href="https://www.youtube.com/watch?v=uqw4-k1e3B0" class="underline">View Exhibition Recap</a>
-                      </div>
-                  </div>
-
-                  <!-- <div class="projects__item">
-                    <picture class="projects__picture">
-                      <source
+<section class="projects" id="projects">
+    <div class="wrapper projects__wrapper">
+        <div class="title" data-aos="fade-down" data-aos-duration="1200"><span>Projects</span></div>
+        <div class="projects__grid">
+            <div class="projects__item">
+                <picture class="projects__picture">
+                    <source
                         media="(min-width: 62.5em)"
                         srcset=""
-                      />
-                      <img
-                        class="projects__image"
-                        src="assets/images/feelthebeatthumb.png"
-                        alt="Screenshot of Feel The Beat"
-                        width-="343"
-                        height="253"
-                      />
-                    </picture>
-                    <h3 class="projects__name">Feel The Beat</h3>
-                    <p class="projects__tags">
-                      <span>P5js</span>
-                      <span>September 2023</span>    
-                    </p>
-                    <p2>
-                        <b><i>Feel The Beat</i></b> is a tribute to the old retro arcade games such as the <i> Dance Dance Revolution</i> arcade series. 
+                />
+                <img
+                    class="projects__image"
+                    src="assets/Singularity.png"
+                    alt="screenshot of singularity"
+                    width-="343"
+                    height="253"
+                />    
+                </picture>
+                <h3 class="projects__name">Singularity</h3>
+                <h2 class="projects__tags">
+                    <span>P5js</span> 
+                    <span>Adobe Premiere Pro</span>
+                    <span>Oct 2023</span>
+                </h2>
+                <p>
+                    <b><i>Singularity</i></b> is an audiovisual spectacle made with the concept of pushing the concepts of algorithms to create a video that pertains to the human senses
+                    of sight and sound. While working on this piece, I was interested in the idea behind black holes and how we as humans get sucked into the idea of passion. 
+                    This piece is a representation of my start into the world of digital media. The <b><i>Singularity</i></b> draws you in, and asks you to think of the bigger picture.
                     <br>
                     <br>
-                    </p2>
-                    <div class="projects__links">
-                      <a href="p5js_code/feel_the_beat/index.html" class="underline">View Project</a>
-                      <a href="p5js_code/feel_the_beat/sketch.js" class="underline">View Code</a>
-                    </div>
-                </div> -->
-
-                <!-- <div class="projects__item">
-                  <picture class="projects__picture">
-                    <source
-                      media="(min-width: 62.5em)"
-                      srcset=""
-                    />
-                    <img
-                      class="projects__image"
-                      src="assets/images/ahandtogive.png"
-                      alt="Screenshot of A Hand To Give"
-                      width-="343"
-                      height="253"
-                    />
-                  </picture>
-                  <h3 class="projects__name">A Hand To Give</h3>
-                  <p class="projects__tags">
-                    <span>P5js</span>
-                    <span>May 2023</span>    
-                  </p>
-                  <p2>
-                    While driving to work on a Monday morning, the sad news of Bay Area’s Hit Music Station Wild 94.9’s host, Jeffrey Vandergrift’s (JV) potential suicide in San Francisco Bay, sent me a reminder of how much of a part we play in each other’s lives. The news provoked memories of laughter filling the car on some really tough days and I would always think about how happy and positive he was and how that inspired me to do the same. The hands are a mold of my own hands set to remind me of what I can I do to prevent further suicides from happening.
-                  <br>
-                  <br>
-                  </p2>
-                  <div class="projects__links">
-                    <a href="assets/images/ahandtogive.png" class="underline">View Project</a>
-                    
-                </div> -->
+                    Audio made by <b>Nate Rza</b>
+                    <br>
+                    <br>
+                    <centre> <u>References</u> </centre>
+                    <br>
+                    <br>
+                    <a href="https://p5js.org/examples/simulate-brownian-motion.html" class="projects__references">P5js: Brownian Motion</a>
+                    <br>
+                    <a href="https://p5js.org/examples/math-parametric-equations.html" class="projects__references">P5js: Parametric Equations</a>
+                    <br>
+                    <a href="https://p5js.org/examples/simulate-penrose-tiles.html" class="projects__references">P5js: Penrose Tiles</a>  
+                    <br>
+                    <br>
+                </p>
+                <div class="projects__links">
+                    <a href="https://www.youtube.com/watch?v=d-aKmRd0IZ0&ab_channel=DannyDaoDMA" class="underline">View Project</a>
+                    <a href="p5js_code/singularity_code/sketch.js" class="underline">View Code</a>
+                    <a href="p5js_code/singularity_code/ddParametricPattern.js" class="underline">View Parametric Class</a>
+                    <a href="p5js_code/singularity_code/ddPenrose.js" class="underline">View Penrose Class</a>
+                    <a href="p5js_code/singularity_code/ddPointPattern.js" class="underline">View Brownian Class</a>
+                </div>
             </div>
-        </section>
 
-        <!-- <section id="contact" class="contact bg-less-dark">
-          <div class="wrapper contact__wrapper bottom-border">
-            <div class="contact__text">
-              <h2 class="contact__headline header-xl">Contact</h2>
-              <p class="contact__description">
-                  I would love to hear about your project and how I could help. Please fill out the form below, and I'll get back to you as soon as possible.
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="assets/designerposter.png"
+                    alt="Screenshot of Design Poster"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">Poster Within A Poster</h3>
+                <h2 class="projects__tags">
+                  <span>Adobe Photoshop</span>
+                  <span>Adobe Illustrator</span>
+                  <span>December 2021</span>
+                </h2>
+                <p>
+                    <b><i>The Poster Within A Poster</i></b> is a replication and admiration for graphic designer, Neville Brody. This poster recreates the themes of punk rock, dadaism, and pop art;
+                    themes of which Neville Brody were influenced by. I wanted to make a poster that would put Neville Brody out in the limelight. In a world where graphic design is becoming more prominent, this poster
+                    changes the population's perspective of advertisement. Instead of advertising a product or corporation, this poster strives to advertise a person of significant importance or better yet, the person behind the job.
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                  <a href="assets/designerposter.png" class="underline">View Project</a>
+                  <a href="assets/images/nevillebrody.jpg" class="underline">View Vector Illustration</a>
+                </div>
+            </div>
+
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="assets/Perspective.png"
+                    alt="Screenshot of Perspective"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">Perspective</h3>
+                <h2 class="projects__tags">
+                  <span>Blender</span>
+                  <span>THREEjs</span>
+                  <span>April 2024</span>    
+                </h2>
+                <p>
+                    "The only thing granted equally to all is an unfair reality." A quote taken from a character from <i>Jujutsu Kaisen</i> whose sister was unfairly cursed despite virtually being a good person.
+                    At that time of my life, I watched a close friend struggle as she fell into a state of misery and depression. Our perspectives were polar opposites. I would often talk about my accomplishments while she would
+                    often talk about her struggles. For her, she was blinded by failure and often told by others that she was not good enough. My inspiration for this piece came from countless hard months of hard conversations and questions
+                    to myself. Are our paths different because of our circumstances or is it because of something deeper than that? When are we able to understand each other? This piece uncovers the perspectives of two very different people,
+                    one that sees everything, the endless possibilites, and the other who sees very little.
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                  <a href="https://dannydaodma.github.io/perspective/" class="underline">View Project</a>
+                </div>
+            </div>
+        
+            <div class="projects__item">
+                <picture class="projects__picture">
+                <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                />
+                <img
+                    class="projects__image"
+                    src="assets/Bubblepop.png"
+                    alt="Screenshot of Bubble Pop: Picnic On Saturn"
+                    width-="343"
+                    height="253"
+                />
+                </picture>
+                <h3 class="projects__name">Bubble Pop: Picnic On Saturn</h3>
+                <h2 class="projects__tags">
+                    <span>ShaderPark</span>
+                    <span>THREEjs</span>
+                    <span>May 2024</span>
+                </h2>
+                <p>
+                    Welcome to Saturn, a planet filled with unknown possibilities. <i>Bubble Pop: Picnic On Saturn</i> is set in a 3D environment with interactivity to enable motion and control inside the space. The title of 
+                    the piece is split into two different names. <i>Picnic on Saturn</i> is a song produced by a good friend of mine which is currently in development. When asked about the song, Nate mentioned that, "The goal was to create a song
+                    that would emulate the idea of what it would be like to have a picnic on Saturn." I pushed this concept further by incorporating a story of the alien lifeform known as <i>Bubble Pop</i>. When combining the two different worlds between
+                    music and art, a story is told through visual and audio immersion creating an environment only possible through net art.
+                <br>
+                <br>
+                    Audio made by <b>Nate Rza</b>
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                    <a href="https://bubble-pop-picnic-on-saturn.glitch.me/" class="underline">View Project</a>
+                </div>
+            </div>
+            
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="/assets/Leftovers.png"
+                    alt="Screenshot of Leftovers"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">Leftovers</h3>
+                <h2 class="projects__tags">
+                  <span>Blender</span>
+                  <span>February 2024</span>    
+                </h2>
+                <p>
+                    While scrambling through an old high school backpack, I came across random items that I had not cleaned out. This is a representation of some of the most important memories I had from my childhood.
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                  <a href="assets/images/Leftovers.png" class="underline">View Project</a>
+                </div>
+            </div>
+
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="assets/Butterflyeffect.png"
+                    alt="Screenshot of Butterfly Effect"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">The Butterfly Effect</h3>
+                <h2 class="projects__tags">
+                  <span>Adobe Illustrator</span>
+                  <span>Adobe After Effects</span>
+                  <span>October 2024</span>    
+                </h2>
+                <p>
+                    I often think that I resemble most like a butterfly. My ability to change and evolve as a person in order to understand the world better has allowed me the sense of liberation and the ability
+                    to let go of burdens. This piece is a reminder to pursue happiness because one life is all we have.
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                  <a href="https://www.youtube.com/shorts/YqkMgFmNvcs" class="underline">View Project</a>
+                </div>
+            </div>
+
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="assets/Lightbox.png"
+                    alt="Screenshot of Lightbox"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">Lightbox Project</h3>
+                <h2 class="projects__tags">
+                  <span>Laser Cutting</span>
+                  <span>Adobe Illustrator</span>
+                  <span>Digital Fabrication</span>
+                  <span>November 2023</span>    
+                </h2>
+                <p>
+                    A night to remember... A collaborative project done with members from the CADRE Student Organization. This project was drawn as a sketch and then implemented through Adobe Illustrator as a layered vector illustration. It was then printed through laser cutting and then implemented into a digital fabricated box with LED lights.
+                <br>
+                <br>
+                    Sketch by <b>Jade Augustin</b>
+                <br>
+                <br>
+                    Digital Sketch by <b>Ky Han Ly</b>
+                <br>
+                <br>
+                </p>
+                <div class="projects__links">
+                  <a href="assets/Lightbox.png" class="underline">View Project</a>
+                  <a href="assets/lightbox_sketch.png" class="underline">View Initial Sketch</a>
+                  <a href="assets/lightbox_box.png" class="underline">View Box</a>
+                </div>
+            </div>
+
+            <div class="projects__item">
+                <picture class="projects__picture">
+                  <source
+                    media="(min-width: 62.5em)"
+                    srcset=""
+                  />
+                  <img
+                    class="projects__image"
+                    src="assets/Subzero.png"
+                    alt="Screenshot of CADRE S.O. At Subzero Festival"
+                    width-="343"
+                    height="253"
+                  />
+                </picture>
+                <h3 class="projects__name">CADRE S.O. At Subzero Festival</h3>
+                <h2 class="projects__tags">
+                  <span>Exhibition</span>
+                  <span>June 2024</span>    
+                </h2>
+                <p>
+                    CADRE S.O. presents <i>Fever Dream</i> and <i>Bubble Pop: Picnic on Saturn</i> at Subzero Festival. The exhibition presents two highly interactive projects on the two day weekend. Both projects were exhibited
+                    through projection mapping and interaction through a MIDI keyboard and the Xbox Kinect.
+                <br>
+                <br>
+                    <i>Fever Dream</i> by <b>Nhat Minh Le</b>
+                <br>
+                <br>
+                    <i>Bubble Pop: Picnic On Saturn</i> by <b>Danny Dao</b>
+                <br>
+                <br>
+                Poster Design by <b>Ky Han Ly</b>
+                <br>
+                 <br>
+                </p>
+                <div class="projects__links">
+                  <a href="https://www.youtube.com/watch?v=_sHjnmHpYIY" class="underline">View Fever Dream</a>
+                  <a href="https://bubble-pop-picnic-on-saturn.glitch.me/" class="underline">View Bubble Pop: Picnic On Saturn</a>
+                  <a href="assets/images/Subzero.png" class="underline">View Poster</a>
+                </div>
+            </div>
+
+            <div class="projects__item">
+              <picture class="projects__picture">
+                <source
+                  media="(min-width: 62.5em)"
+                  srcset=""
+                />
+                <img
+                  class="projects__image"
+                  src="assets/blot-room-poster.png"
+                  alt="Screenshot of The Blot Room"
+                  width-="343"
+                  height="253"
+                />
+              </picture>
+              <h3 class="projects__name">CADRE S.O. Presents The Blot Room</h3>
+              <h2 class="projects__tags">
+                <span>Exhibition</span>
+                <span>October 2024</span>    
+              </h2>
+              <p>
+                  The CADRE Student Organization and the CADRE Laboratory for New Digital Media have worked together to prepare an exhibition for Maker Faire 2024 in Vallejo, California. 
+                  Brought to you by CADRE S.O. President, John Joseph Santos, CADRE S.O. Vice President, Danny Dao, and DMA Faculty, Steve Durie, the exhibition provides a variety of projects ranging form
+                  video game arcade prototypes presented by The Game Development Club at SJSU, the Lightbox Collection and other works. 
+              <br>
+              <br>
+              Poster Design by <b>Ky Han Ly</b>
+              <br>
+              <br>
               </p>
-            </div>
-            <form action="" class="contact__form">
-              <div class="contact__control">
-                <label for="name" class="visually-hidden">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="name"
-                  required
-                />
-                <img
-                  src="/assets/images/icon-invalid.svg"
-                  alt=""
-                  class="contact__invalid-icon"
-                  width="24"
-                  height="24"
-                />
+              <div class="projects__links">
+                <a href="https://www.youtube.com/watch?v=uqw4-k1e3B0" class="underline">View Exhibition Recap</a>
+                <a href="assets/blot-room-poster.png" class="underline">View Poster</a>
               </div>
-              <div class="contact__control">
-                <label for="email" class="visually-hidden">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="email"
-                  required
-                />
-                <img
-                  src="assets/images/icon-invalid.svg"
-                  alts=""
-                  class="contact__invalid-icon"
-                  width="24"
-                  height="24"
-                />
-              </div>
-              <div class="contact__control"></div>
-                <label for="message" class="visually-hidden">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  cols="30"
-                  rows="3"
-                  placeholder="message"
-                  required
-                ></textarea>
-                <img
-                  src="/assets/images/icon-invalid.svg"
-                  alt=""
-                  class="contact__invalid-icon"
-                  width="24"
-                  height="24"
-                />
-              </div>
-              <div class="contact__control align-right">
-                <button type="submit">Send Message</button>
-              </div>
-            </form>
-          </div>
-        </section>
-      </main> -->
+    </div>
+</section>
 
-    <footer class="footer bg-less-dark">
-      <h2 class="visually-hidden">Footer</h2>
-      <div class="wrapper">
-        <nav class="header__nav">
-          <h2 class="visually-hidden">Navigation</h2>
-            <a href="https://dannydaodma.github.io/Portfolio/" class="header__home">
-              dannydao
-              <span class="visually-hidden">(to home page)</span>
-            </a>
-        </nav>
-      </div>    
-    </footer>
-  </body>
+<!-- Contact -->
+
+<section class="contact" id="contact">
+    <div class="content">
+        <div class="title" data-aos="fade-up" data-aos-duration="1500">
+            <span>Contact Me</span>
+        </div>
+        <div class="text">
+            <div class="topic" data-aos="fade-right" data-aos-duration="1200">Want to Collaborate?</div>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium ea consequatur enim unde magni eveniet natus corporis soluta ab saepe optio, voluptate porro quis doloribus fugit vel, tenetur repellat facilis?</p> -->
+            <div class="button">
+                <a href="https://www.linkedin.com/in/danny-dao-b22241290/"> <button>Let's Chat</button> </a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/DannydaoDMA" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/danny-dao-b22241290/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://www.youtube.com/@DannyDaoDMA-vp8qd" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+
+<footer>
+    <div class="text">
+        <span> Created By
+            <a href="#">Danny Dao</a>
+            &#169, 2024 All Rights Reserved
+        </span>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
 </html>
